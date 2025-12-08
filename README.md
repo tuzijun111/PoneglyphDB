@@ -1,3 +1,5 @@
+## PoneglyphDB: Efficient Non-interactive Zero-Knowledge Proofs for Arbitrary SQL-Query Verification
+
 # halo2-TPCH instruction:
 To generate the proofs for SQL queries Q1, Q3, Q5, Q8, Q9 and Q18, please run the following commands at the root of the project.
 
