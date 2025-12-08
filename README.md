@@ -2,9 +2,11 @@
 
 **PoneglyphDB** provides efficient non-interactive zero-knowledge proofs (NIZKs) for verifying arbitrary SQL queries. This repository includes Halo2 circuits for TPC-H workloads and end-to-end proof generation.
 
-## Halo2-TPCH Instructions
+---
 
-To generate the proofs for SQL queries Q1, Q3, Q5, Q8, Q9, and Q18, please run the following commands at the root of the project:
+## 🚀 Halo2-TPCH Instructions
+
+To generate proofs for SQL queries **Q1, Q3, Q5, Q8, Q9, and Q18**, run the following commands from the project root:
 
 ```bash
 # Query 1
@@ -24,22 +26,37 @@ cargo test --package halo2-experiments --lib -- sql::q9_final_v2::tests::test_1 
 
 # Query 18
 cargo test --package halo2-experiments --lib -- sql::q18_final_v2::tests::test_1 --exact --nocapture
+```
 
+---
 
+## 📝 Notes
 
-## Notes
-# Prerequisites: Stack Size
-Please enable sufficient RUST_MIN_STACK before running proofs:
-Please enable sufficient RUST_MIN_STACK by running, e.g., "export RUST_MIN_STACK=33554432"
+### **Prerequisite: Stack Size**
 
+Halo2 circuits require a sufficiently large stack size. Set `RUST_MIN_STACK` before generating proofs:
+
+```bash
 export RUST_MIN_STACK=33554432
+```
 
-Public Parameter Selection (k)For different datasets, please choose the correct public parameters (k).Dataset SizeQ1, Q5, Q8, Q9, Q18Q360k Rowsk = 16k = 15120k Rowsk = 17k = 16240k Rowsk = 18k = 17
+---
 
+### **Public Parameter Selection (`k`)**
 
-## Citation
+Select appropriate Halo2 public parameters depending on dataset size:
 
-If you find our work helpful, please consider citing:
+| Dataset Size | Queries (Q1, Q5, Q8, Q9, Q18) | Query Q3 |
+| ------------ | ----------------------------- | -------- |
+| 60k Rows     | k = 16                        | k = 15   |
+| 120k Rows    | k = 17                        | k = 16   |
+| 240k Rows    | k = 18                        | k = 17   |
+
+---
+
+## 📚 Citation
+
+If you find our work useful, please consider citing:
 
 ```bibtex
 @article{gu2025poneglyphdb,
@@ -52,4 +69,4 @@ If you find our work helpful, please consider citing:
   year={2025},
   publisher={ACM New York, NY, USA}
 }
-
+```
