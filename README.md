@@ -59,8 +59,9 @@ Select appropriate Halo2 public parameters depending on dataset size:
 | 120k Rows    | k = 17                        | k = 16   |
 | 240k Rows    | k = 18                        | k = 17   |
 
-Note: The necessary parameters are already persisted as param15 through param18. Please be aware that manually configuring the degree ($k$) within the source code is only supported when using the MockProver.
 ---
+Note: The necessary parameters are already persisted as param15 through param18. Please be aware that manually configuring the degree ($k$) within the source code is only supported when using the MockProver.
+
 
 ## 📚 Citation
 
