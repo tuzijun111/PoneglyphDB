@@ -7,7 +7,7 @@
 
 **PoneglyphDB** provides efficient non-interactive zero-knowledge proofs (NIZKs) for verifying arbitrary SQL queries. This repository includes Halo2 circuits for TPC-H workloads and end-to-end proof generation.
 
-Halo2 circuits for TPC-H workloads and end-to-end proof generation.
+
 
 ---
 
