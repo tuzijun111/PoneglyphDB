@@ -79,3 +79,9 @@ If you find our work useful, please consider citing:
   publisher={ACM New York, NY, USA}
 }
 ```
+
+## Recommendation
+
+For the general oblivious, privacy-preserving version, please refer to [VPJoin](https://github.com/tuzijun111/VPJoin).
+
+
